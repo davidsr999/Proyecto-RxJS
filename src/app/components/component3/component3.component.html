@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 style="color: #00ff00;">SwitchMap</h1>
+
+<div id="elemnt1">
+    <p class="click" style="background-color: #ffea00; padding: 1rem">
+        Con switchMap podemos cortar un observable. Al hacer click sobre este recuadro narangalo que ocurre en la 
+        console es que se inicia un conteo mediante 'interval(1000)'. La gracia de swicthMap es que, al volver a 
+    hacer click sobre este recuadro, se reinicia, se rompe, el conteo osea el observable.     </p>
+</div>
+
+<p style="background-color: #ff9900; opacity: .9; padding: 1rem">A continuación se muestra un contador que se puede detener con el botón Pause y reanudar con el Resume. El funcionamiento
+    es el siguiente: creamos un observable interval y lo mapeamos para que devuelva +1 cada segundo. Para cada botón 
+    cramos un obsevable con fromEvent al hacer click. Uno devuelve true y el otro false. Con un "merge" juntamos los dos anteriores observables. 
+    Al juntarlos, creamos el observable timer y, con un pipe, hacemos lo siguiente: ponemos como valor inicial true con un "startWicth", 
+    luego mediante un switchMap hacemos un if else. Como empezamos con el valor true, devolvemos el valor del observable con interval (suma 1
+    al contador). Con un scan le sumamos al valor que teníamos antes el +1 del intervalobs. Finalmente, con un takewhile nos aseguramos 
+    de que la cuenta no llegue a más de 10. Si le damos al botón Pause, el valor es false y dentro del switchMap devuelve un empty, por lo tanto,
+    el contador se queda como está y se detiene. 
+</p>
+
+<div class="buttons" style=" border: 1px solid #ff9900;">
+    <button mat-button id="pause">Pause</button>
+    <button mat-button id="resume" color="accent">Resume</button>
+    <p id="remain"></p>
+</div>
+
+
+<p>.</p>
+
+</div>
+
+
+

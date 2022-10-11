@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+    margin: 20rem 0;
+    padding: 0;
+}
+
+
+.click:hover {
+    cursor: pointer;
+    transition:  ease-in-out;
+}
+
+.click:active {
+    opacity: .8;
+    transform: scale(.99);
+}
