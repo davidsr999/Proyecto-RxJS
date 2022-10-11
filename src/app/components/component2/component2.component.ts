@@ -14,7 +14,7 @@ export class Component2Component implements OnInit {
     //take sirve para multiplicar (en este caso 4 veces) el intervalo (timer) de 1s (1000ms)
 
     //primera observable
-    const timer = interval(2000).pipe(take(4));
+    const timer = interval(500).pipe(take(4));
 
     //segunda observable
     const rango = range(1, 10); //cuenta del 1 al 10
