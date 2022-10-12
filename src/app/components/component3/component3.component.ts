@@ -21,6 +21,20 @@ export class Component3Component implements OnInit {
     const resumelabel = document.getElementById('resume');
     const pauselabel = document.getElementById('pause');
 
+    //========================================================
+    //para el segundo ejemplo
+    const text1 = document.getElementById('text1');
+    const click1 = document.getElementById('click1');
+
+    const obsclick1 = fromEvent(click1, 'click')
+    .pipe(switchMap(() => interval(500)))
+    .subscribe(val => text1.innerHTML = val.toString());
+
+
+
+
+    //====================================================
+
 
     fromEvent(document.getElementById('elemnt1'), 'click').pipe(tap(() => console.log('Empieza el conteo!')),
     switchMap(() => interval(700)), takeWhile(val => val <= 10)).subscribe({

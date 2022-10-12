@@ -11,7 +11,7 @@ export class Component1Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const time = timer(2000);
+    const time = timer(500);
 
     const obs = time.pipe(
       tap(() => console.log('================\n'+'TAP on')),
