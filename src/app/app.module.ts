@@ -9,13 +9,17 @@ import { Component3Component } from './components/component3/component3.componen
 
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Component4Component } from './components/component4/component4.component';
+import { Component5Component } from './components/component5/component5.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Component1Component,
     Component2Component,
-    Component3Component
+    Component3Component,
+    Component4Component,
+    Component5Component
   ],
   imports: [
     BrowserModule,

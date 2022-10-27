@@ -1,0 +1,31 @@
+<div class="content">
+    <h1 style="color: #67e6dc;">ConcatMap, MergeMap, SwitchMap y ExhaustMap</h1>
+    <p>Vamos a ver cómo funcionan estos operadores de rxjs con varios ejemplos, empezamos con ConcatMap. En el observable 1 solo hacemos 
+        uso del operador of() de Rxjs para crear un observable 0 que emite valores del 1 al 5 en orden. Vemos que 
+        el observable 1 es tal cual el 0 y emite las respuestas
+         instantáneamente. Sin embargo, en el observable 2, se ha utilizado un ConcatMap para concatenar la respuesta 
+        de cada valor del observable 0 con un delay de 500ms y ahora hay un tiempo entre valor y valor. 
+    </p>
+    <button (click)="onclicksuscribe1()" class="btn btn-primary" type="button">Observable 1</button>
+    <div class="console"></div>
+
+    <button (click)="onclicksuscribe2()" class="btn btn-primary" type="button">Observable 2</button>
+    <div class="console"></div>
+
+    <div class="bar"></div>
+
+    <p>Pasamos a utilizar Concat a continuación. Empezamos utilizando interval(9), el cual devuelve valores ordenados (0,1,2...) cada vez que 
+        es llamado. Para llamarlo repetidas veces, le aplicamos un pipe y dentro el operador take(9).n El observable 3.2 es un range.
+    En el observable 3 se han concatenado 3.1 y 3.2 mediante concat()  </p>
+
+    <button (click)="onclicksuscribe3_1()" class="btn btn-primary" type="button">Observable 3.1</button>
+    <div class="console"></div>
+    <button (click)="onclicksuscribe3_2()" class="btn btn-primary" type="button">Observable 3.2</button>
+    <div class="console"></div>
+    <button (click)="onclicksuscribe3()" class="btn btn-primary" type="button">Observable 3</button>
+    <div class="console"></div>
+
+    <div class="bar"></div>
+    <div  style="margin: 0; margin-bottom: 4rem;" class="bar"></div>
+
+</div>
